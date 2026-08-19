@@ -21,8 +21,12 @@ Order of operations:
 4. Smoke test: book a session end to end, buy a gift voucher, submit the
    contact form, check images load, check https://saunaswithsoul.ie/sitemap.xml.
 
-Longer term: self-host the images in this repo so the site does not depend on
-WP uptime, and swap the E2 text badge for the real award photo from Philip.
+Photos are now self-hosted in /images (Philip's photo drop, optimized and
+renamed) and the E2 text badge has been replaced with the real trophy photo.
+Still served from WP and covered by the find-and-replace above: the favicon,
+the Prestige winner-logo.png, and the og:image (sauna.jpeg). The raw
+"WhatsApp Image" files and video in the folder root are gitignored; move or
+delete them whenever.
 
 ## Already done
 Clean URLs (vercel.json), canonicals + OG tags on every page, sitemap.xml,

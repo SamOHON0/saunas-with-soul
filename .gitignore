@@ -1,3 +1,8 @@
 .DS_Store
 node_modules/
 .vercel
+
+# Raw photo dumps - keep out of the deploy
+WhatsApp Image*
+WhatsApp Video*
+*.mp4
