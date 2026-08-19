@@ -116,10 +116,14 @@
   @media(max-width:560px){.award img{width:44px;height:44px}}
 
   /* TICKER */
-  .ticker{background:var(--wht);color:#000;overflow:hidden;padding:13px 0}
-  .tk{display:flex;width:max-content;animation:sl 42s linear infinite;font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
-  .tk span{padding:0 24px}
-  @keyframes sl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .ticker{background:var(--wht);color:#000;padding:16px 0}
+  .tk{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 0;font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .tk span{padding:0 20px;white-space:nowrap}
+  @media(max-width:560px){
+    .ticker{padding:12px 0}
+    .tk{font-size:10px;letter-spacing:.12em;padding:0 18px;gap:4px 0;line-height:1.5}
+    .tk span{padding:0 10px}
+  }
 
   /* PROOF BAND */
   .proof{background:var(--ink-2);border-bottom:1px solid var(--rule)}
@@ -298,7 +302,6 @@
   [data-rv]{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
   @media(prefers-reduced-motion:reduce){
     [data-rv]{opacity:1;transform:none;transition:none}
-    .tk{animation:none}
     *{scroll-behavior:auto}
   }
   a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
@@ -320,11 +323,11 @@
 <header class="nav">
   <div class="wrap">
     <a href="/" class="wordmark"><img class="mk" src="https://saunaswithsoul.ie/wp-content/uploads/2025/05/Saunasforsoul.ie-10.png" alt="Saunas with Soul">Saunas with Soul</a>
-    <nav class="navlinks"><a href="/" class="on">Home</a><a href="/#locations">Locations</a><a href="/panoramic">Panoramic Retreats</a><a href="/sessions">Sessions</a><a href="/events">Events</a><a href="/faqs">FAQs</a><a href="/contact">Contact</a></nav>
+    <nav class="navlinks"><a href="/" class="on">Home</a><a href="/#locations">Locations</a><a href="/panoramic">Panoramic</a><a href="/sessions">Sessions</a><a href="/awards">Awards</a><a href="/events">Events</a><a href="/faqs">FAQs</a><a href="/contact">Contact</a></nav>
     <a href="https://saunaswithsoul.ie/product/book-sauna-carlingford-village-louth/" target="_blank" rel="noopener" class="nav-cta">Book a session</a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-  <div class="mm" id="mm"><a href="/">Home</a><a href="/#locations">Locations</a><a href="/panoramic">Panoramic Retreats</a><a href="/sessions">Sessions</a><a href="/events">Events</a><a href="/faqs">FAQs</a><a href="/contact">Contact</a><a href="https://saunaswithsoul.ie/product/book-sauna-carlingford-village-louth/" target="_blank" rel="noopener">Book a session</a></div>
+  <div class="mm" id="mm"><a href="/">Home</a><a href="/#locations">Locations</a><a href="/panoramic">Panoramic</a><a href="/sessions">Sessions</a><a href="/awards">Awards</a><a href="/events">Events</a><a href="/faqs">FAQs</a><a href="/contact">Contact</a><a href="https://saunaswithsoul.ie/product/book-sauna-carlingford-village-louth/" target="_blank" rel="noopener">Book a session</a></div>
 </header>
 
 <section class="hero" id="top">
@@ -463,7 +466,7 @@
       <p>Stunning views across Carlingford Lough and towards the majestic Slieve Foy Mountain.</p>
     </div>
   </div>
-  <div class="gal"><a href="/sessions"><img src="images/sauna-interior-lough-view.jpg" alt="Inside the sauna looking out over Carlingford Lough" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/cold-plunge-splash.jpg" alt="Cold plunge dunk at the Folklore Park" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/pier-couple-plunge.jpg" alt="Couple in the barrel plunge on Carlingford Pier" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/group-plunge-folklore.jpg" alt="Group session at the Folklore Park" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/sauna-at-night.jpg" alt="The sauna glowing at night" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/candlelit-sauna.jpg" alt="Candlelit evening session" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/rainbow-carlingford-lough.jpg" alt="Rainbow over Carlingford Lough" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/steps-into-the-lough.jpg" alt="Steps straight into the lough" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/ice-bath.jpg" alt="Ice plunge at the Panoramic Retreat" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/pier-popup-setup.jpg" alt="Pop-up setup on Carlingford Pier" loading="lazy" decoding="async"></a></div>
+  <div class="gal"><a href="/sessions"><img src="images/sauna-interior-lough-view.jpg" alt="The wood-fired sauna looking over Carlingford Lough" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/cold-plunge-splash.jpg" alt="Cold plunge at Saunas with Soul" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/sea-swim-group.jpg" alt="A group in Carlingford Lough after the sauna" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/pier-couple-plunge.jpg" alt="Whiskey barrel plunge at Carlingford Pier" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/sauna-group-prosecco.jpg" alt="A private group session in the wood-fired sauna" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/group-plunge-folklore.jpg" alt="Group session at the Folklore Park" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/barrels-at-dusk.jpg" alt="The sauna and plunge barrels at dusk" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/sauna-at-night.jpg" alt="The wood-fired sauna at night" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/awakener-and-pretender.jpg" alt="The Awakener and The Pretender plunge barrels" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/candlelit-sauna.jpg" alt="Candlelit sauna overlooking the water" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/prosecco-on-the-lough.jpg" alt="A toast in Carlingford Lough" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/rainbow-carlingford-lough.jpg" alt="Rainbow over Carlingford Lough" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/sauna-stove.jpg" alt="Inside the wood-fired sauna" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/steps-into-the-lough.jpg" alt="Steps down into Carlingford Lough" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/ice-bath.jpg" alt="Giant ice cubes in the cold plunge barrel" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/retreat-sunroom-group.jpg" alt="The panoramic sun room at the retreat" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/pier-popup-setup.jpg" alt="The Carlingford Pier pop-up" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/folklore-park-plunge-barrels.jpg" alt="Three whiskey barrel plunges at the Folklore Park" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/prosecco-sauna-view.jpg" alt="Chilled Prosecco at the sauna" loading="lazy" decoding="async"></a><a href="/sessions"><img src="images/bride-ice-barrel.jpg" alt="A hen party ice plunge at Saunas with Soul" loading="lazy" decoding="async"></a></div>
 </section>
 
 <section class="sec" style="padding-top:104px">
@@ -519,7 +522,7 @@
         <p style="max-width:34ch">Multi-award-winning sauna and cold plunge experience across three Carlingford locations, plus a sauna that travels.</p>
       </div>
       <div><h4>Experiences</h4>
-        <a href="/sessions">Public sessions</a><a href="/panoramic">Panoramic Retreats</a><a href="/sessions">Private hire</a><a href="/events">Events &amp; corporate</a><a href="https://saunaswithsoul.ie/product/gift-voucher/" target="_blank" rel="noopener">Gift vouchers</a>
+        <a href="/sessions">Public sessions</a><a href="/panoramic">Panoramic</a><a href="/sessions">Private hire</a><a href="/events">Events &amp; corporate</a><a href="https://saunaswithsoul.ie/product/gift-voucher/" target="_blank" rel="noopener">Gift vouchers</a>
       </div>
       <div><h4>Find us</h4>
         <a href="#locations">Folklore Park</a><a href="#locations">Carlingford Pier</a><a href="/panoramic">South Commons</a><a href="tel:+353872716323">087 271 6323</a><a href="mailto:info@saunaswithsoul.ie">info@saunaswithsoul.ie</a>
@@ -569,8 +572,10 @@ var yr=document.getElementById('yr');if(yr){yr.textContent=new Date().getFullYea
 
 
 var tick=['Wood-fired sauna','Giant Ice Cubes','Prosecco Parties','Whiskey Barrel Cold Plunges','Changing Rooms','Panoramic Retreats','Carlingford Lough','Hot shower','Corporate wellness','Grazing boards','Gift Vouchers'];
-var ln=tick.map(function(t){return '<span>'+t+' &#9670;</span>';}).join('');
-document.getElementById('tk').innerHTML=ln+ln;
+/* Static band: each item once, diamond used as a separator between items only. */
+document.getElementById('tk').innerHTML=tick.map(function(t,i){
+  return '<span>'+t+(i<tick.length-1?' &#9670;':'')+'</span>';
+}).join('');
 
 </script>
 </body>
