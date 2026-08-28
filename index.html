@@ -107,13 +107,6 @@
   .phero p{max-width:60ch;margin-top:18px;color:var(--mut);font-size:17px;font-weight:500}
 
   /* AWARD PILLS */
-  .awards-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
-  .award{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--rule-2);padding:10px 20px 10px 12px;background:rgba(6,6,6,.5);backdrop-filter:blur(6px);border-radius:6px}
-  .award img{width:58px;height:58px;object-fit:contain;flex:none}
-  .award .aw-t{font-weight:600;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--wht);line-height:1.5}
-  .award .aw-t b{display:block;font-size:13px;letter-spacing:.1em}
-  .award .aw-medal{width:44px;height:44px;flex:none;display:grid;place-items:center;border:1px solid var(--rule-2);border-radius:50%;font-size:20px}
-  @media(max-width:560px){.award img{width:44px;height:44px}}
 
   /* TICKER */
   .ticker{background:var(--wht);color:#000;padding:16px 0;overflow:hidden;position:relative}
@@ -138,7 +131,7 @@
 
   /* PROOF BAND */
   .proof{background:var(--ink-2);border-bottom:1px solid var(--rule)}
-  .proof .wrap{display:grid;grid-template-columns:auto auto 1fr;gap:40px;align-items:center;padding-top:48px;padding-bottom:48px}
+  .proof .wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;padding-top:48px;padding-bottom:48px}
   .proof-photo{position:relative;display:block;width:196px;flex:none;border:1px solid var(--rule-2);border-radius:6px;overflow:hidden;aspect-ratio:3/4}
   .proof-photo img{transition:transform .5s ease;object-position:center 28%}
   .proof-photo:hover img{transform:scale(1.05)}
@@ -172,7 +165,7 @@
 
   /* LOCATION MAPS */
   .mapwrap{position:relative;margin:24px 0 16px;border:1px solid var(--rule);border-radius:6px;overflow:hidden;height:210px;background:var(--ink-3)}
-  .mapwrap iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(1) invert(.92) contrast(.86) brightness(1.06)}
+  .mapwrap iframe{width:100%;height:100%;border:0;display:block;}
   .maplink{align-self:flex-start;display:inline-flex;align-items:center;gap:9px;margin:0 0 4px;padding-bottom:4px;font-weight:600;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);border-bottom:1px solid rgba(127,216,230,.38);transition:border-color .18s}
   .maplink:hover{border-bottom-color:var(--acc)}
   .maplink .arr{font-size:14px;line-height:1}
@@ -379,20 +372,10 @@
   </div>
   <div class="wrap">
     <div class="hero-inner">
-      <div class="awards-row">
-        <div class="award">
-          <img src="https://saunaswithsoul.ie/wp-content/uploads/2026/03/winner-logo.png" alt="Prestige Awards winner" decoding="async">
-          <span class="aw-t">Prestige Awards 2025/26<b>Wellness Experience of the Year</b></span>
-        </div>
-        <div class="award">
-          <img src="images/e2-award-trophy.jpg" alt="E2 Media Award of Excellence 2026" decoding="async" style="border-radius:50%;object-fit:cover">
-          <span class="aw-t">E2 Media Award of Excellence 2026<b>Ireland's Mobile Sauna Experience of the Year</b></span>
-        </div>
-      </div>
       <div class="hero-meta">
         <span>Carlingford, Co Louth</span><span>Three locations</span><span>From &euro;15</span>
       </div>
-      <h1>Saunas with Soul, Carlingford</h1>
+      <h1>Saunas with Soul Carlingford</h1>
       <p class="sub">Saunas with Soul is a multi-award-winning sauna experience featuring wood-fired saunas and whiskey barrel plunges across three stunning Carlingford locations, with breathtaking views across Carlingford Lough, Slieve Foy and the Mourne Mountains. Sessions from &euro;15.</p>
       <div class="hero-cta">
         <a href="https://saunaswithsoul.ie/product/book-sauna-carlingford-village-louth/" target="_blank" rel="noopener" class="btn btn-acc">Book a session</a>
@@ -404,10 +387,6 @@
 
 <section class="proof" id="awards">
   <div class="wrap">
-    <a class="proof-photo" href="/awards">
-      <img src="images/prestige-awards-trophy.jpg" alt="Saunas with Soul collecting the Prestige Awards 2025/26 Wellness Experience of the Year" decoding="async">
-      <span class="pp-cap">Prestige Awards night<span class="arr">&rarr;</span></span>
-    </a>
     <div class="proof-badges">
       <div class="proof-badge">
         <img class="proof-logo" src="https://saunaswithsoul.ie/wp-content/uploads/2026/03/winner-logo.png" alt="Republic of Ireland Prestige Awards 2025/26 winner">
@@ -469,7 +448,7 @@
       <div class="bd">
         <span class="lbl ac">02 &middot; Pop-up sessions</span>
         <h2>Carlingford Pier</h2>
-        <p>The Pier sessions offer spectacular, uninterrupted views of Slieve Foy Mountain, with direct access to pier jumps and the nearby beach. There is beach access approximately 3 hours before and after high tide.</p>
+        <p>The Pier sessions offer spectacular, uninterrupted views of Slieve Foy Mountain, with direct access to pier jumps and the nearby beach. There is beach access approximately 4 hours before and after high tide.</p>
         <p>One whiskey barrel plunge on site, filled with fresh water and seaweed.</p>
         <div class="facts">
           <div><b>Pier</b>on the water</div>
@@ -505,17 +484,17 @@
 <section class="sec warm" id="ritual">
   <div class="wrap">
     <div class="sec-head">
-      <div><span class="lbl ac">How a session runs</span><h2>The ritual</h2></div>
+      <div><span class="lbl ac">How a sea session works</span><h2>The ritual</h2></div>
       <p>Sessions are 50 minutes long. However, if the following session is not full, we do not rush customers out.</p>
     </div>
-    <div class="rit"><div class="rrow" data-rv><div class="rn">01</div><div><h3>Arrive</h3></div><div><p>We would recommend you arrive 5 mins before your public session starts. We have portable changing facilities with male and female rooms.</p></div><div class="rt">5 mins before</div></div><div class="rrow" data-rv><div class="rn">02</div><div><h3>Heat</h3></div><div><p>Into the wood-fired sauna, with stunning views across Carlingford Lough and towards the majestic Slieve Foy Mountain.</p></div><div class="rt">Wood-fired</div></div><div class="rrow" data-rv><div class="rn">03</div><div><h3>Plunge</h3></div><div><p>Straight out into a whiskey barrel plunge: cold fresh water, cold filtered sea water, or filtered sea water infused with seaweed.</p></div><div class="rt">Cold plunge</div></div><div class="rrow" data-rv><div class="rn">04</div><div><h3>The lough</h3></div><div><p>We have tidal access to Carlingford Lough, normally 2 and a half hours before and after high tide. <a href="https://www.tideschart.com/Ireland/Leinster/Louth/Carlingford/" target="_blank" rel="noopener">Check Carlingford Lough tides</a>.</p></div><div class="rt">Tide permitting</div></div><div class="rrow" data-rv><div class="rn">05</div><div><h3>Shower</h3></div><div><p>We have an instant hot and cold shower for rinsing off before your cold plunges and when you start and finish your session.</p></div><div class="rt">Hot &amp; cold</div></div></div>
+    <div class="rit"><div class="rrow" data-rv><div class="rn">01</div><div><h3>Arrive</h3></div><div><p>We would recommend you arrive 5 mins before your public session starts. We have portable changing facilities with male and female rooms.</p></div><div class="rt">5 mins before</div></div><div class="rrow" data-rv><div class="rn">02</div><div><h3>Heat</h3></div><div><p>Into the wood-fired sauna, with stunning views across Carlingford Lough and towards the majestic Slieve Foy Mountain.</p></div><div class="rt">Wood-fired</div></div><div class="rrow" data-rv><div class="rn">03</div><div><h3>Plunge</h3></div><div><p>Straight out into one of our whiskey barrel cold plunges.</p></div><div class="rt">Cold plunge</div></div><div class="rrow" data-rv><div class="rn">04</div><div><h3>The lough</h3></div><div><p>We have tidal access to Carlingford Lough, normally 2 and a half hours before and after high tide at the Folklore Park, and 4 hours before and after high tide at Carlingford Pier. <a href="https://www.tideschart.com/Ireland/Leinster/Louth/Carlingford/" target="_blank" rel="noopener">Check Carlingford Lough tides</a>.</p></div><div class="rt">Tide permitting</div></div><div class="rrow" data-rv><div class="rn">05</div><div><h3>Shower</h3></div><div><p>We have an instant hot and cold shower for rinsing off before your cold plunges and when you start and finish your session.</p></div><div class="rt">Hot &amp; cold</div></div></div>
   </div>
 </section>
 
 <section class="sec" style="padding-bottom:0;border-bottom:none">
   <div class="wrap">
     <div class="sec-head">
-      <div><span class="lbl">Photos</span><h2>Saunas with Soul, Carlingford</h2></div>
+      <div><span class="lbl">Photos</span><h2>Saunas with Soul Carlingford</h2></div>
       <p>Stunning views across Carlingford Lough and towards the majestic Slieve Foy Mountain.</p>
     </div>
   </div>
