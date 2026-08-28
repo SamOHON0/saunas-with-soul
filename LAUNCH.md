@@ -1,6 +1,35 @@
 # Launch checklist - saunaswithsoul.ie
 
-The site is production ready except for TWO placeholders and ONE hosting move.
+The site is production ready except for THREE placeholders and ONE hosting move.
+
+## 0. PartyOps session booking (NEW - replaces WooCommerce for sessions)
+Public session bookings now go through PartyOps: every "Book now" / "Book a
+session" button on the site points at `/book` (book.html), which embeds the
+PartyOps sessions widget (live slots, seat picker, card payment via Stripe).
+Until the ID below is filled in, /book shows a friendly call/WhatsApp fallback
+instead of the widget - so the site can ship before the account exists.
+
+To go live with online booking:
+1. Create Philip's PartyOps account at https://partyops.app/admin/signup
+   (or hand over a login the usual way).
+2. In PartyOps admin: connect Stripe (Billing), then open /admin/sessions:
+   - Enable sessions.
+   - Add the two session types:
+     * "Sauna + Cold Plunge (Folklore Park)" - 50 min, 10 seats, EUR 15/seat,
+       location "Carlingford Folklore Park, Ghan Road, A91 X820"
+     * "Sauna + Cold Plunge (Carlingford Pier)" - 50 min, 10 seats, EUR 15/seat,
+       location "Carlingford Pier"
+   - Add the weekly slots (the "Repeat weekly until" field generates a whole
+     season per weekday in one go; Pier times move with the tide, so add those
+     week by week).
+   - Turn ON "Require payment at booking".
+3. In `book.html`, replace `PARTYOPS_BUSINESS_ID` (one place, in the script at
+   the bottom) with the business ID shown on the /admin/sessions page.
+4. Smoke test: book and pay for a seat end to end; check the confirmation
+   email arrives and the booking shows in /admin/sessions.
+
+Gift vouchers still run through WooCommerce (see section 2) until PartyOps
+does vouchers.
 
 ## 1. Two link placeholders
 - `contact.html` and `events.html` contain `[FORM-ID]` (Formspree).
@@ -11,10 +40,12 @@ The site is production ready except for TWO placeholders and ONE hosting move.
 ## 1b. Formspree (blocks forms)
 `contact.html` and `events.html` still contain `[FORM-ID]`. Create the form at formspree.io, then find-and-replace `[FORM-ID]` with the real ID in both files.
 
-## 2. WordPress must move BEFORE DNS switches (blocks bookings + images)
-Booking (WooCommerce), gift vouchers and ALL images are served by the current
-WordPress site at saunaswithsoul.ie. If this static site takes over the apex
-domain while WP is still there, WP goes offline and bookings and images break.
+## 2. WordPress must move BEFORE DNS switches (blocks vouchers + images)
+Session bookings now run through PartyOps (section 0), so WooCommerce is no
+longer needed for those - but gift vouchers and ALL images are still served by
+the current WordPress site at saunaswithsoul.ie. If this static site takes
+over the apex domain while WP is still there, WP goes offline and vouchers
+and images break.
 
 Order of operations:
 1. Move WordPress to https://book.saunaswithsoul.ie (hosting: add subdomain,
