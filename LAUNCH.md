@@ -6,8 +6,9 @@ The site is production ready except for THREE placeholders and ONE hosting move.
 Public session bookings now go through PartyOps: every "Book now" / "Book a
 session" button on the site points at `/book` (book.html), which embeds the
 PartyOps sessions widget (live slots, seat picker, card payment via Stripe).
-Until the ID below is filled in, /book shows a friendly call/WhatsApp fallback
-instead of the widget - so the site can ship before the account exists.
+The draft site is currently wired to Sam's PartyOps preview account (seeded with
+the real session types and weekend slots), so /book works end to end for review.
+If the ID is ever blanked, /book falls back to a call/WhatsApp card.
 
 To go live with online booking:
 1. Create Philip's PartyOps account at https://partyops.app/admin/signup
@@ -23,8 +24,9 @@ To go live with online booking:
      season per weekday in one go; Pier times move with the tide, so add those
      week by week).
    - Turn ON "Require payment at booking".
-3. In `book.html`, replace `PARTYOPS_BUSINESS_ID` (one place, in the script at
-   the bottom) with the business ID shown on the /admin/sessions page.
+3. In `book.html`, swap the TEMP business ID (currently Sam's PartyOps preview account,
+   so the draft site books end to end) for Philip's real business ID from his
+   /admin/sessions page. One place, in the script at the bottom of the file.
 4. Smoke test: book and pay for a seat end to end; check the confirmation
    email arrives and the booking shows in /admin/sessions.
 

@@ -445,7 +445,9 @@ var yr=document.getElementById('yr');if(yr){yr.textContent=new Date().getFullYea
    (Admin -> Sessions shows the exact snippet). Until then the page shows
    the call/WhatsApp fallback instead of an empty box. */
 (function(){
-  var PARTYOPS_BUSINESS_ID='PARTYOPS_BUSINESS_ID';
+  // TEMP: Sam's PartyOps preview account (samohigginsemail@gmail.com) so the draft
+  // site books end to end. Swap for Philip's real business ID before launch.
+  var PARTYOPS_BUSINESS_ID='02d45712-9018-4910-bd6c-043651562afc';
   var wrap=document.getElementById('pw-wrap'),fb=document.getElementById('pw-fallback');
   if(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(PARTYOPS_BUSINESS_ID)){
     var s=document.createElement('script');
