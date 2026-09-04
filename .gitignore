@@ -6,3 +6,8 @@ node_modules/
 WhatsApp Image*
 WhatsApp Video*
 *.mp4
+
+# Working notes and Philip feedback screenshots - not site content
+Claude outputs/
+[0-9][0-9]-*.jpg
+*.lnk
