@@ -6,20 +6,19 @@ The site is production ready except for THREE placeholders and ONE hosting move.
 Public session bookings now go through PartyOps: every "Book now" / "Book a
 session" button on the site points at `/book` (book.html), which embeds the
 PartyOps sessions widget (live slots, seat picker, card payment via Stripe).
-The draft site is currently wired to Sam's PartyOps preview account (seeded with
-the real session types and weekend slots), so /book works end to end for review.
-If the ID is ever blanked, /book falls back to a call/WhatsApp card.
+DONE 4 Sep 2026: Philip's PartyOps account exists (info@saunaswithsoul.ie,
+business ID 1f95d665-6d6b-44b8-b112-5a5c123e95d3, temp password in
+Websites/_philip-partyops-login.txt, not in git). book.html points at it.
+Sessions are enabled, the three session types and the seeded weekend slots
+were copied over from Sam's preview account, and it runs in request mode
+(no card payment) until Stripe is connected. If the ID is ever blanked,
+/book falls back to a call/WhatsApp card.
 
 To go live with online booking:
-1. Create Philip's PartyOps account at https://partyops.app/admin/signup
-   (or hand over a login the usual way).
+1. Send Philip the login and have him change the password in Settings.
 2. In PartyOps admin: connect Stripe (Billing), then open /admin/sessions:
-   - Enable sessions.
-   - Add the two session types:
-     * "Sauna + Cold Plunge (Folklore Park)" - 50 min, 10 seats, EUR 15/seat,
-       location "Carlingford Folklore Park, Ghan Road, A91 X820"
-     * "Sauna + Cold Plunge (Carlingford Pier)" - 50 min, 10 seats, EUR 15/seat,
-       location "Carlingford Pier"
+   - Check the session types (already there: Folklore Park, Carlingford Pier,
+     Women's Only; 50 min, 10 seats, EUR 15/seat).
    - Add the slots. Philip's routine (his words, 4 Sep 2026): sessions start
      every hour and he opens up each weekend once he knows his hours. In
      "Add slots": pick the session type, Date = Saturday, "Also on" = Sunday,
