@@ -138,8 +138,10 @@
   .proof-photo .pp-cap{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:22px 12px 10px;background:linear-gradient(180deg,rgba(6,6,6,0) 0%,rgba(6,6,6,.88) 100%);font-weight:600;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--wht)}
   .proof-photo .arr{color:var(--acc);font-size:13px}
   .proof-badges{display:flex;gap:28px;align-items:center}
-  .proof-badge{max-width:170px;text-align:center}
-  .proof-logo{width:128px;height:128px;object-fit:contain;margin:0 auto}
+  .proof-badge{max-width:200px;text-align:center}
+  /* Both award images share one height (the Prestige logo is landscape, the E2 plaque
+     is portrait), so they read as the same size side by side - Philip, 4 Sep 2026. */
+  .proof-logo{display:block;width:auto;height:128px;max-width:200px;object-fit:contain;margin:0 auto}
   .proof-cap{display:block;font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:10px;line-height:1.55}
   .e2-badge{width:128px;height:128px;border:1px solid var(--rule-2);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px;margin:0 auto;padding:20px;overflow:hidden}
   .e2-badge b{font-size:24px;letter-spacing:.06em;line-height:1}
@@ -157,7 +159,7 @@
     .proof-photo{grid-row:auto;width:100%;max-width:340px;aspect-ratio:4/3}
     .proof-photo .pp-cap{font-size:10px;padding:26px 14px 12px}
     .proof-badges{justify-content:flex-start}
-    .proof-logo,.e2-badge{width:100px;height:100px}
+    .proof-logo{height:100px;max-width:160px}.e2-badge{width:100px;height:100px}
     .proof-stats{grid-template-columns:1fr 1fr;gap:22px}
     .proof-stats div{min-height:0;padding-left:18px}
     .proof-stats b{font-size:38px;margin-bottom:8px}
