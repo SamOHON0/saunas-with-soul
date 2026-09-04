@@ -350,7 +350,11 @@
 
       <h2>Buying one</h2>
       <p>You will be asked for the recipient&rsquo;s name and address, and you pay by card at the checkout.</p>
-      <p style="margin-top:26px"><a class="btn btn-acc" href="https://saunaswithsoul.ie/product/gift-voucher/" target="_blank" rel="noopener">Buy a voucher</a></p>
+      <!-- PartyOps gift voucher widget. Falls back to the WooCommerce product
+           link if PARTYOPS_BUSINESS_ID is blank (script at the bottom). -->
+      <div id="gv-wrap" style="background:#fff;border-radius:8px;padding:8px 0;min-height:120px;margin-top:26px"></div>
+      <p id="gv-balance" hidden style="margin-top:12px;font-size:14px"><a href="https://partyops.app/embed-vouchers/1f95d665-6d6b-44b8-b112-5a5c123e95d3/balance" target="_blank" rel="noopener">Check a voucher balance</a></p>
+      <p id="gv-fallback" hidden style="margin-top:26px"><a class="btn btn-acc" href="https://saunaswithsoul.ie/product/gift-voucher/" target="_blank" rel="noopener">Buy a voucher</a></p>
 
       <h2>Voucher terms</h2>
       <ul>
@@ -433,6 +437,26 @@ document.querySelectorAll('.fq').forEach(function(q){
 var yr=document.getElementById('yr');if(yr){yr.textContent=new Date().getFullYear();}
 
 
+
+/* PARTYOPS GIFT VOUCHER WIDGET (same pattern as book.html) */
+(function(){
+  // Philip's PartyOps business (info@saunaswithsoul.ie). Blank it to fall back to the WooCommerce product.
+  var PARTYOPS_BUSINESS_ID='1f95d665-6d6b-44b8-b112-5a5c123e95d3';
+  var wrap=document.getElementById('gv-wrap'),fb=document.getElementById('gv-fallback'),bal=document.getElementById('gv-balance');
+  if(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(PARTYOPS_BUSINESS_ID)){
+    var s=document.createElement('script');
+    s.src='https://partyops.app/widget.js';
+    s.setAttribute('data-business-id',PARTYOPS_BUSINESS_ID);
+    s.setAttribute('data-mode','vouchers');
+    s.setAttribute('data-target','#gv-wrap');
+    s.setAttribute('data-height','640');
+    document.body.appendChild(s);
+    if(bal)bal.hidden=false;
+  }else{
+    if(wrap)wrap.hidden=true;
+    if(fb)fb.hidden=false;
+  }
+})();
 </script>
 </body>
 </html>

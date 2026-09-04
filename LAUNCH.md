@@ -35,8 +35,27 @@ To go live with online booking:
 4. Smoke test: book and pay for a seat end to end; check the confirmation
    email arrives and the booking shows in /admin/sessions.
 
-Gift vouchers still run through WooCommerce (see section 2) until PartyOps
-does vouchers.
+## 0b. PartyOps gift vouchers (4 Sep 2026)
+`/vouchers` now embeds the PartyOps voucher widget for Philip's business
+(same business ID as /book). Until Stripe is connected on his PartyOps
+account the widget shows a contact card rather than a checkout; the old
+WooCommerce product link is the fallback only if the ID in vouchers.html is
+blanked. To go live:
+1. Connect Stripe (done as part of section 0).
+2. In PartyOps Admin -> Vouchers: check the presets (15..200), 5 years, and
+   the terms text match saunaswithsoul.ie/terms section 10 (pre-seeded).
+3. Press "Generate API key", install the WordPress plugin from
+   `integrations/woocommerce-partyops-vouchers/` in the PartyOps repo, and
+   paste the API URL, business ID and key into WooCommerce -> Settings ->
+   PartyOps Vouchers. Codes then redeem at the Woo checkout too.
+4. Ask Philip how many WooCommerce vouchers are outstanding: either keep Woo
+   honouring them until they expire, or issue them by hand in PartyOps
+   ("Issue a voucher by hand") so they work in both places.
+5. Philip removes the stray Carlingford Pier checkbox from the Woo voucher
+   product regardless.
+
+Gift vouchers remain purchasable through WooCommerce (see section 2) as a
+fallback until the PartyOps widget is taking payment.
 
 ## 1. Two link placeholders
 - `contact.html` and `events.html` contain `[FORM-ID]` (Formspree).
