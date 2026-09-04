@@ -20,9 +20,15 @@ To go live with online booking:
        location "Carlingford Folklore Park, Ghan Road, A91 X820"
      * "Sauna + Cold Plunge (Carlingford Pier)" - 50 min, 10 seats, EUR 15/seat,
        location "Carlingford Pier"
-   - Add the weekly slots (the "Repeat weekly until" field generates a whole
-     season per weekday in one go; Pier times move with the tide, so add those
-     week by week).
+   - Add the slots. Philip's routine (his words, 4 Sep 2026): sessions start
+     every hour and he opens up each weekend once he knows his hours. In
+     "Add slots": pick the session type, Date = Saturday, "Also on" = Sunday,
+     First = 10:00, Last = 15:00, Every hour, then Add slots. Six hourly
+     sessions land on both days. Repeat per type (Folklore Park and Pier
+     have different hours; Pier moves with the tide, so give Pier its own
+     times, or type odd times into "specific times"). "Repeat weekly until"
+     is optional if a stretch of weekends is the same. Each day has "Close
+     day" / "Reopen day" and "Delete unbooked" for weather or mistakes.
    - Turn ON "Require payment at booking".
 3. In `book.html`, swap the TEMP business ID (currently Sam's PartyOps preview account,
    so the draft site books end to end) for Philip's real business ID from his
